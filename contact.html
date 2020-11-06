@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--css-->
+    <link href="css/index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="header">
+
+        <a href="index.html"><img src="images/ichiyon.png" alt="ロゴ"></a>
+        <!-- ①サイトタイトル -->
+
+        <div class="nav-wrapper">
+            <!-- ②ナビゲーションメニュー -->
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">HOME</a></li>
+                    <li class="nav-item"><a href="space.html">SPACE</a></li>
+                    <li class="nav-item"><a href="menu.html">MENU</a></li>
+                    <li class="nav-item"><a href="insta.html">NEWS</a></li>
+                    <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="burger-btn">
+            <!-- ③ハンバーガーボタン -->
+            <span class="bars">
+          <span class="bar bar_top"></span>
+            <span class="bar bar_mid"></span>
+            <span class="bar bar_bottom"></span>
+            </span>
+        </div>
+
+    </header>
+    <!-- フルスクリーン写真-->
+
+    <body>
+        <section>
+            <div class="contact-img">
+                <h1 class="contact-teama">CONTACT</h1>
+            </div>
+            <div class="container">
+                <div class="contact-text">
+                    <h2 class="border-primary">お問い合わせについて</h2>
+                    <p>いちよんでは今後、より良いサービスの提供に努めてまいりますので、よろしければお客様からのご意見・ご要望をお聞かせください。 お問い合わせ・ご予約は、メールフォームもしくはお電話にてお願いいたします。 メールフォームでのご予約は、ご希望日の3日前まで受け付けを行っております それ以降はお電話でのご予約をお願いいたします。<br><br>メールフォームより、お問い合わせ・ご予約をいただいてから 2日過ぎても当店より連絡がない場合は、システム障害等によりメールが届いていない場合がございます。
+                        お手数ですが、お電話にてご連絡いただきご確認ください。</p>
+                </div>
+        </section>
+        <!--form-->
+        <section>
+            <form action="complete.php" method="POST">
+                <div class="form-group">
+                    <div class=container>
+                        <div class="row">
+                            <label class="col-form-label col-sm-3">氏名:</label>
+                            <div class="col-sm-9">
+                                <input type="text" id="name" class="form-control" name="company" placeholder="一四　太郎" required>
+                                <span id="name_alert"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="container">
+                        <div class="row">
+                            <label class="col-form-label col-sm-3">フリガナ：</label>
+                            <div class="col-sm-9">
+                                <input type="text" id="nameKana" class="form-control" name="name" placeholder="イチヨン　タロウ" required>
+                                <span id="kana_alert"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="container">
+                        <div class="row">
+                            <label class="col-form-label col-sm-3">メール：</label>
+                            <div class="col-sm-9">
+                                <input type="text" id="mail" class="form-control" name="mail" placeholder="mail@tarou" required>
+                                <span id="mail_alert"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="container">
+                        <div class="row">
+                            <label class="col-form-label col-sm-3">電話番号：</label>
+                            <div class="col-sm-9">
+                                <input type="text" id="tel" class="form-control" name="tel" placeholder="080-XXXX-XXXX" required>
+                                <span id="tel_alert"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="container">
+                        <div class="row">
+                            <label class="col-form-label col-sm-3">内容：</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" name="content" placeholder="ご予約について" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <p>※ お客様からいただいたお問い合わせや個人情報は厳重にお取り扱いさせていただきます。<br> ※ ご同意をいただいた上でご記入ください。<br> ※ 以上のフォームより、必要事項を入力のうえ送信してください。</p>
+                    <div class="check-box">
+                        <p><input type="checkbox" name="check" value="同意しました。">:同意する</p>
+                        <p id="checks"></p>
+                    </div>
+                    <div class="form-group row">
+                        <button type="submit" class="btn btn-success btn-block">お問い合わせ内容を送信する</button>
+                    </div>
+            </form>
+            </div>
+            </div>
+        </section>
+        <!--フッター-->
+        <footer id="footer">
+            <div class="container">
+                <div class="cont-wrap">
+                    <div class="cont">
+                        <div class="info">
+                            <a href="index.html"></a>
+                            <img class="logo" src="images/ichiyon.png" alt="ロゴ">
+                            <p class="address">
+                                〒135-0002<br> 埼玉県さいたま市浦和区東仲町１０−１
+                                <br>スカイフィールド３階<br> TEL: 03-XXXX-XXXX
+                                <br>営業時間AM10:00~AM5:00
+                                <br>店休　（不定休）
+                            </p>
+                            <div class="footer-sns">
+                                <a href="#!"><i class="fab fa-twitter"></i></a>
+                                <a href="#!"><i class="fab fa-facebook"></i></a>
+                                <a href="#!"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/d/embed?mid=1jXWTQvUfo8wrN9MghweSkZu6wu0yBSd-" width="640" height="480"></iframe>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--jquery-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="js/main.js"></script>
+        <!--bootstrap-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,911 @@
+@charset"UTF-8";
+/*全体*/
+
+html {
+    font-size: 100%;
+}
+
+body {
+    line-height: 1.7;
+    margin: 0;
+}
+
+h2 {
+    font-family: serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-list li a:hover {
+    color: orange;
+    font-size: 1.2rem;
+}
+
+span {
+    color: red;
+}
+
+/*下から上にフェードイン*/
+
+.down-to-top {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 3s;
+}
+
+.down-to-top.scrollin {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -------------------- */
+
+/* header
+/* -------------------- */
+
+#space-head,
+#insta-head {
+    margin-top: -60px;
+}
+
+#menu-head {
+    margin-top: -30px;
+}
+
+.header {
+    position: fixed;
+    background-color: #000;
+    color: #fff;
+    height: 74px;
+    padding: 0 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 500;
+}
+
+.header img {
+    width: 200px;
+    height: 65px;
+}
+
+.nav-list {
+    /* navの横並び */
+    display: flex;
+}
+
+.nav-item {
+    /* メニューの右側に余白 */
+    margin-right: 55px;
+}
+
+.burger-btn {
+    display: none;
+}
+
+
+
+/* ------------------ */
+
+/* humberger-menu */
+
+/* ------------------ */
+
+@media screen and (max-width:640px) {
+    .header {
+        padding: 0 5%;
+    }
+    .burger-btn {
+        display: block;
+        width: 39px;
+        height: 39px;
+        position: relative;
+        z-index: 3;
+        /*   codepenの挙動のため */
+        background-color: transparent;
+        border: none;
+    }
+    .bar {
+        width: 20px;
+        height: 1px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+    }
+    .bar_top {
+        top: 10px;
+    }
+    .bar_mid {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .bar_bottom {
+        bottom: 10px;
+    }
+    .burger-btn.close .bar_top {
+        transform: translate(-50%, 10px) rotate(45deg);
+        transition: transform .3s;
+    }
+    .burger-btn.close .bar_mid {
+        opacity: 0;
+        transition: opacity .3s;
+    }
+    .burger-btn.close .bar_bottom {
+        transform: translate(-50%, -8px) rotate(-45deg);
+        transition: transform .3s;
+    }
+    .nav-wrapper {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        /*キービジュアルと.btn_triggerとの重なりの前後関係を調整*/
+    }
+    .header-nav {
+        width: 100%;
+        height: 100%;
+        background-color: #1B1310;
+        z-index: 2;
+    }
+    .header-nav .nav-list {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .header-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+/* 　　　　　　　*/
+
+/* フルスクリーンエリア*/
+
+.page-title {
+    padding: 10%;
+    color: #000;
+    font-family: serif;
+}
+
+.page-title h1 {
+    font-size: 180px;
+    display: block;
+}
+
+.page-title h2 {
+    font-size: 80px;
+}
+
+.page-title h3 {
+    color: #FFF;
+}
+
+.home-intro {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: serif;
+    padding: 60px;
+}
+
+.home-intro h2 {
+    padding: 15px;
+}
+
+.big-img {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#home {
+    background-image: url(../images/1401.jpg);
+    min-height: 100vh;
+}
+
+/*  ボタン  */
+
+.button {
+    font-size: 1.375rem;
+    background: #000;
+    color: #fff;
+    padding: 18px 32px;
+}
+
+.button:hover {
+    background: #0090aa;
+}
+
+/* 　　　　　　　*/
+
+/* お店の紹介エリア*/
+
+.main-intro h2 {
+    font-size: 60px;
+    margin: 50px;
+    font-family: 'Nothing You Could Do', cursive;
+    text-align: center;
+}
+
+.main-intro {
+    text-align: center;
+}
+
+#intro-flex {
+    display: flex;
+}
+
+.intro-flexs {
+    display: flex;
+}
+
+.sub-intro {
+    margin: 50px;
+
+}
+
+.sub-intro h3 {
+    margin: 20px;
+    color: #442602;
+    font-family: serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.intro-btn {
+    margin: 50px;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.freeSpace-img {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 90px 0;
+}
+
+.cafeBar-flex {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    margin: 90px 0;
+    margin-left: -10px;
+    background-color: #000;
+    color: #FFF;
+    padding: 30px 0;
+}
+
+#cafeBar-text {
+    margin-left: 90px;
+}
+
+#cafeBar-texts {
+    margin-right: 90px;
+}
+
+.cafeBar-intro h3 {
+    font-size: 80px;
+    margin: 10px;
+    font-family: 'Nothing You Could Do', cursive;
+}
+
+/* 　　　　　　　*/
+
+/* ロールナビエリア*/
+
+.roll-nav {
+    float: left;
+    background-image: url(../images/counter.png);
+    width: 100vw;
+    display: block;
+    height: 300px;
+    background-attachment: fixed;
+    color: #fff;
+    margin-bottom: 100px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.roll-nav h2 {
+    margin-top: 40px;
+}
+
+.roll-nav p {
+    margin: 15px;
+}
+
+.roll-card {
+    display: inline-block;
+    padding: 0.6em;
+    width: 40%;
+    background: #fff;
+    border-radius: 3px;
+    font-size: 30px;
+}
+
+.notice {
+    padding-right: 0.8em;
+    color: #000;
+    border-right: 1px solid #fff;
+}
+
+.fab {
+    margin-left: 0.8em;
+    color: #fff;
+}
+
+.twitter {
+    color: red;
+}
+
+/* 　　　　　　　*/
+
+/* お知らせエリア*/
+
+.faq {
+    margin-bottom: 90px;
+}
+
+.faq h2 {
+    margin-bottom: 30px;
+}
+
+.faq-list-item {
+    margin: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.faq-list-item h4 {
+    font-size: 20px;
+}
+
+.faq-list-item span {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color: #442602;
+    ;
+    font-size: 13px;
+}
+
+.answer {
+    font-size: 18px;
+    display: none;
+    padding: 5px 0px;
+    margin-bottom: 15px;
+}
+
+
+/* 　　　　　　　*/
+
+/* フッターエリア*/
+
+#footer {
+    background: #090d00;
+
+}
+
+.cont-wrap {
+    padding: 40px 0;
+    display: flex;
+}
+
+.address {
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+}
+
+.map {
+    width: 700px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-sns a {
+    font-size: 50px;
+    color: #999999;
+    margin-left: 20px;
+}
+
+
+/*            */
+
+/* menuページ */
+
+.menus {
+    font-family: serif;
+    margin-bottom: 30px;
+    font-size: 40px;
+    width: 50%;
+    margin: 40px;
+}
+
+.menus h2 {
+    font-size: 40px;
+}
+
+.menus h4 {
+    font-size: 10px;
+}
+
+.menus h5 {
+    float: right;
+    margin-top: -60px;
+}
+
+#menu-flex {
+    display: flex;
+    margin-bottom: 60px;
+    box-shadow: 2px 4px 5px;
+}
+
+#menu-flexs {
+    display: flex;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 2px 4px 5px;
+
+}
+
+/* 大きな背景画像 */
+
+.lunch-img {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-image: url(../images/1407.jpg);
+    min-height: 100vh;
+}
+
+.lunch-title {
+    text-align: center;
+}
+
+.lunch-title h2 {
+    margin-top: 30px;
+    font-family: serif;
+    margin-bottom: 30px;
+}
+
+/* 見出し */
+
+.menu-head {
+    padding-top: 60px;
+}
+
+
+.menu-title h2 {
+
+    font-size: 4rem;
+    margin: 30px;
+    font-size: 100px;
+    font-family: 'Nothing You Could Do', cursive;
+    text-align: center;
+    border-bottom: double 10px;
+}
+
+#bar-img {
+    background-image: url(../images/bar.jpg);
+    min-height: 100vh;
+    color: #fff;
+}
+
+#bar-menu {
+    color: #fff;
+}
+
+.bar-title {
+    padding-top: 30px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.bar-title h3 {
+    font-family: serif;
+    margin-bottom: 20px;
+}
+
+.bbar {
+    margin: 90px 0 90px;
+}
+
+.grid {
+    display: grid;
+    gap: 26px 30px;
+    grid-template-columns: repeat(auto-fit, minmax( 240px, 1fr));
+    margin-top: 6%;
+    padding-bottom: 30px;
+}
+
+.grid img {
+    border-radius: 10px;
+}
+
+.grid img:hover {
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+}
+
+.grid p {
+    margin-top: 20px;
+}
+
+.black {
+    background-color: #000;
+    color: #fff;
+}
+
+/* MENUここまで
+
+/**/
+
+/*space.html*/
+
+article {
+    width: 74%;
+}
+
+aside {
+    width: 24%;
+}
+
+.news-contents {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.space-title {
+    font-family: serif;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.space-title h2 {
+    color: #663300;
+}
+
+.space-second {
+    margin-bottom: 30px;
+}
+
+
+.space-second h2 {
+    color: #663300;
+
+}
+
+
+/*  サイドバー    */
+
+article img {
+    margin-bottom: 20px;
+}
+
+article p {
+    margin-bottom: 1rem;
+}
+
+aside p {
+    padding: 12px 10px;
+}
+
+/*プライスタグ*/
+
+.pricecards {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.pricecard {
+    flex: 0 0 33%;
+    text-align: center;
+    border: 3px solid #f76d37;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+    margin: 0 auto 3em;
+}
+
+.pricecard h3 {
+    background: #f76d37;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+}
+
+.pricecard h4 {
+    font-size: 200%;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+}
+
+.pricecard p {
+    margin: 0;
+    padding: 1rem;
+    text-align: left;
+}
+
+.pricecard a {
+    padding: 10px 10px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.pricecard a:hover {
+    background: #0090aa;
+}
+
+.space-imge {
+    display: flex;
+
+}
+
+/*サイドメニュー*/
+
+.sub-menu {
+    margin-bottom: 60px;
+    list-style: none;
+}
+
+.sub-menu li {
+    border-bottom: 1px #ddd solid;
+}
+
+.sub-menu a {
+    color: #432;
+    padding: 10px;
+    display: block;
+}
+
+.sub-menu a:hover {
+    color: #0bd;
+}
+
+.sub-title {
+    margin-top: 60px;
+    font-size: 1.375rem;
+    padding: 0 8px 8px;
+    border-bottom: 2px #000 solid;
+    font-weight: normal;
+}
+
+aside p {
+    padding: 12px 10px;
+}
+
+.card-header {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.insta {
+    margin: 60px 0 50px;
+}
+
+.instagram-media {
+    margin-top: 30px;
+}
+
+.btn-success {
+    margin-bottom: 100px;
+}
+
+/* contact.html
+------------------------------- */
+
+.contact-teama {
+    font-size: 80px;
+    text-align: center;
+    padding: 90px;
+    font-family: impact;
+}
+
+.contact-img {
+    background-image: url(../images/1414.jpg);
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    font-size: 180px;
+    margin-bottom: 90px;
+}
+
+.contact-text h2 {
+    font-size: 40px;
+}
+
+.contact-text p {
+    margin: 60px 0;
+}
+
+.check-box {
+    text-align: center;
+}
+
+/* モバイル版
+------------------------------- */
+
+@media (max-width: 640px) {
+    .page-title h1 {
+        padding-top: 250px;
+        font-size: 60px;
+        font-weight: 700;
+    }
+    .page-title h2 {
+        font-size: 45px;
+
+    }
+    .page-title h3 {
+        font-size: 20px;
+    }
+
+    .cafeBar-flex {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .cafe-img {
+        order: 1;
+        margin-top: -90px;
+    }
+    .cafeBar-intro {
+        order: 2;
+        text-align: center;
+    }
+    .bar-img {
+        order: 3;
+    }
+    #cafeBar-texts {
+        order: 4;
+        margin: 30px;
+    }
+    #cafeBar-text {
+        margin: 30px;
+    }
+    .cafeBar-flex {
+        margin-left: 10px;
+    }
+    .roll-nav h2,
+    .roll-nav p {
+        display: none;
+    }
+    .roll-card {
+        width: 300px;
+        padding: 30px;
+        margin-top: 60px;
+    }
+    .cont-wrap {
+        display: block;
+    }
+    .map {
+        width: 250px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    .cont-wrap {
+        text-align: center;
+    }
+    .logo {
+        display: none;
+    }
+
+    /* SPACE */
+    /*------------------------------- */
+    .news-contents {
+        flex-direction: column;
+    }
+    #news .page-title {
+        margin-top: 30px;
+    }
+    article,
+    aside {
+        width: 100%;
+    }
+    aside {
+        margin-top: 60px;
+    }
+    .profile_card,
+    .pricecards {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+
+    .pricecard,
+    .card_photo {
+        flex: 0 0 auto;
+        -webkit-flex: 0 0 auto;
+    }
+    /* MENU */
+    /*------------------------------- */
+    .lunch-title h2 {
+        font-size: 20px;
+    }
+    .menu-title h2 {
+        font-size: 40px;
+    }
+    #menu-flex {
+        display: block;
+        padding-bottom: 30px;
+    }
+    #menu-flexs {
+        display: block;
+        padding-bottom: 30px;
+    }
+
+    .menus h2 {
+        margin-left: 90px;
+        margin-botoom: 30px;
+    }
+    .menus {
+        width: 100%;
+        margin: 0px;
+    }
+    .contact-teama {
+        font-size: 50px;
+        padding-top: 160px;
+    }
+    .contact-text h2 {
+        margin: -60px 0 -30px;
+        text-align: center;
+        font-size: 30px;
+    }
+}
